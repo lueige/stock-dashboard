@@ -39,216 +39,63 @@ body {
   font-feature-settings: "tnum";
 }
 
-.container {
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 48px 40px 140px;
-}
+.container { max-width: 1160px; margin: 0 auto; padding: 48px 40px 140px; }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding-bottom: 32px;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 40px;
-  gap: 24px;
-  flex-wrap: wrap;
+  display: flex; justify-content: space-between; align-items: flex-end;
+  padding-bottom: 32px; border-bottom: 1px solid var(--border); margin-bottom: 40px;
+  gap: 24px; flex-wrap: wrap;
 }
 
-.brand {
-  font-family: 'Fraunces', serif;
-  font-size: 36px;
-  font-weight: 400;
-  letter-spacing: -0.025em;
-  line-height: 1;
-  font-style: italic;
-}
-
+.brand { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 400; letter-spacing: -0.025em; line-height: 1; font-style: italic; }
 .meta { text-align: right; font-size: 12px; color: var(--text-secondary); }
-.meta-date {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  color: var(--text-primary);
-  margin-bottom: 4px;
-}
+.meta-date { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-primary); margin-bottom: 4px; }
 
 .tab-pane { display: none; animation: fadeUp 0.4s ease-out; }
 .tab-pane.active { display: block; }
 
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+@keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 
-.tldr {
-  padding: 24px 28px;
-  background: var(--surface);
-  border-left: 2px solid var(--gold);
-  margin-bottom: 56px;
-  font-size: 15px;
-  line-height: 1.75;
-}
-
-.tldr-label {
-  font-size: 10px;
-  color: var(--gold);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  font-weight: 500;
-}
-
+.tldr { padding: 24px 28px; background: var(--surface); border-left: 2px solid var(--gold); margin-bottom: 56px; font-size: 15px; line-height: 1.75; }
+.tldr-label { font-size: 10px; color: var(--gold); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 12px; font-weight: 500; }
 .tldr strong { color: var(--text-primary); font-weight: 500; }
 
 section { margin-bottom: 40px; }
+.sec-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 24px; gap: 16px; flex-wrap: wrap; }
+.sec-num { font-family: 'Fraunces', serif; font-style: italic; font-size: 12px; color: var(--gold); }
+.sec-title { font-family: 'Fraunces', serif; font-size: 26px; font-weight: 400; letter-spacing: -0.02em; line-height: 1.2; flex: 1; }
+.sec-sub { font-size: 11px; color: var(--text-tertiary); letter-spacing: 0.08em; text-transform: uppercase; }
 
-.sec-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 24px;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.sec-num {
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-size: 12px;
-  color: var(--gold);
-}
-
-.sec-title {
-  font-family: 'Fraunces', serif;
-  font-size: 26px;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  flex: 1;
-}
-
-.sec-sub {
-  font-size: 11px;
-  color: var(--text-tertiary);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.snap {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-}
-
-.snap-cell {
-  background: var(--surface);
-  padding: 20px 22px;
-  transition: background 0.2s;
-}
-
+.snap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.snap-cell { background: var(--surface); padding: 20px 22px; transition: background 0.2s; }
 .snap-cell:hover { background: var(--surface-hover); }
-
-.sn-name {
-  font-size: 10px;
-  color: var(--text-secondary);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  font-weight: 500;
-}
-
-.sn-value {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: -0.025em;
-  margin-bottom: 8px;
-}
-
+.sn-name { font-size: 10px; color: var(--text-secondary); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px; font-weight: 500; }
+.sn-value { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 500; letter-spacing: -0.025em; margin-bottom: 8px; }
 .sn-change { font-family: 'JetBrains Mono', monospace; font-size: 11px; }
 .sn-note { font-size: 11px; color: var(--text-tertiary); margin-top: 6px; }
-
 .up { color: var(--up); }
 .down { color: var(--down); }
 
 .holdings { border: 1px solid var(--border); background: var(--surface); }
-
-.holdings-head {
-  display: grid;
-  grid-template-columns: 30% 18% 47% 5%;
-  padding: 12px 24px;
-  background: var(--surface-2);
-  border-bottom: 1px solid var(--border);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-tertiary);
-  font-weight: 500;
-}
-
+.holdings-head { display: grid; grid-template-columns: 30% 18% 47% 5%; padding: 12px 24px; background: var(--surface-2); border-bottom: 1px solid var(--border); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 500; }
 .h-row { border-bottom: 1px solid var(--border); }
 .h-row:last-child { border-bottom: none; }
-
-.h-main {
-  display: grid;
-  grid-template-columns: 30% 18% 47% 5%;
-  padding: 16px 24px;
-  cursor: pointer;
-  transition: background 0.15s;
-  align-items: start;
-  gap: 16px;
-}
-
+.h-main { display: grid; grid-template-columns: 30% 18% 47% 5%; padding: 16px 24px; cursor: pointer; transition: background 0.15s; align-items: start; gap: 16px; }
 .h-main:hover { background: var(--surface-hover); }
 .h-asset { font-size: 14px; }
 .h-reason { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
 .h-arrow { font-size: 10px; color: var(--text-tertiary); text-align: right; }
 
-.h-new-badge {
-  display: inline-block;
-  padding: 1px 6px;
-  margin-right: 6px;
-  background: var(--teal);
-  color: var(--bg);
-  font-size: 9px;
-  font-weight: 500;
-  border-radius: 2px;
-  letter-spacing: 0.05em;
-  vertical-align: middle;
-}
+.h-changed-badge { display: inline-block; padding: 1px 6px; margin-right: 6px; background: var(--up); color: white; font-size: 9px; font-weight: 500; border-radius: 2px; letter-spacing: 0.05em; vertical-align: middle; }
 
-.h-detail {
-  padding: 20px 24px 24px;
-  background: var(--bg);
-  border-top: 1px solid var(--border);
-  font-size: 12px;
-}
-
+.h-detail { padding: 20px 24px 24px; background: var(--bg); border-top: 1px solid var(--border); font-size: 12px; }
 .h-detail-grid { display: grid; gap: 6px; }
-
-.h-detail-row {
-  display: grid;
-  grid-template-columns: 132px 1fr;
-  gap: 16px;
-  padding: 5px 0;
-}
-
+.h-detail-row { display: grid; grid-template-columns: 132px 1fr; gap: 16px; padding: 5px 0; }
 .dl { color: var(--text-tertiary); font-size: 11px; padding-top: 2px; }
 .dv { color: var(--text-secondary); line-height: 1.55; }
 .dv .num { font-family: 'JetBrains Mono', monospace; color: var(--text-primary); font-weight: 500; }
 
-.badge {
-  display: inline-block;
-  padding: 3px 10px;
-  border-radius: 2px;
-  font-size: 11px;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
+.badge { display: inline-block; padding: 3px 10px; border-radius: 2px; font-size: 11px; font-weight: 500; white-space: nowrap; }
 .b-hold { background: rgba(142,141,134,0.12); color: #A8A7A0; }
 .b-buy { background: rgba(74,143,231,0.13); color: #7BAAE8; }
 .b-trim { background: rgba(224,169,74,0.13); color: #DFB574; }
@@ -262,36 +109,14 @@ section { margin-bottom: 40px; }
 .rec-watch { background: rgba(224,169,74,0.12); color: #DFB574; }
 .rec-skip { background: rgba(92,91,87,0.2); color: var(--text-secondary); border: 1px solid var(--border-strong); }
 
-.filter-bar {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 28px;
-  padding: 20px 24px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-}
-
+.filter-bar { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; padding: 20px 24px; background: var(--surface); border: 1px solid var(--border); }
 .fgrp { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
 .flbl { font-size: 10px; color: var(--text-tertiary); min-width: 72px; letter-spacing: 0.12em; text-transform: uppercase; }
-
-.fbtn {
-  padding: 5px 14px;
-  font-size: 12px;
-  background: transparent;
-  border: 1px solid var(--border-strong);
-  color: var(--text-secondary);
-  cursor: pointer;
-  font-family: inherit;
-  border-radius: 2px;
-  transition: all 0.15s;
-}
-
+.fbtn { padding: 5px 14px; font-size: 12px; background: transparent; border: 1px solid var(--border-strong); color: var(--text-secondary); cursor: pointer; font-family: inherit; border-radius: 2px; transition: all 0.15s; }
 .fbtn:hover { background: var(--surface-2); color: var(--text-primary); }
 .fbtn.on { background: var(--text-primary); color: var(--bg); border-color: var(--text-primary); }
 
 .theme-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-
 .t-card { background: var(--surface); border: 1px solid var(--border); }
 .t-main { padding: 22px 24px; cursor: pointer; transition: background 0.15s; }
 .t-main:hover { background: var(--surface-hover); }
@@ -303,13 +128,7 @@ section { margin-bottom: 40px; }
 .t-lbl { font-size: 10px; color: var(--text-tertiary); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
 .t-tic { font-size: 12px; color: var(--text-primary); line-height: 1.5; font-family: 'JetBrains Mono', monospace; }
 .t-arrow { font-size: 10px; color: var(--text-tertiary); margin-left: 6px; }
-
-.t-detail {
-  padding: 18px 24px 22px;
-  background: var(--bg);
-  border-top: 1px solid var(--border);
-  font-size: 12px;
-}
+.t-detail { padding: 18px 24px 22px; background: var(--bg); border-top: 1px solid var(--border); font-size: 12px; }
 
 .events-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
 .ev-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); }
@@ -327,235 +146,48 @@ section { margin-bottom: 40px; }
 .empty { padding: 48px 24px; text-align: center; font-size: 13px; color: var(--text-tertiary); background: var(--surface); border: 1px solid var(--border); }
 
 .current-holdings { border: 1px solid var(--border); background: var(--surface); margin-bottom: 40px; }
-
-.ch-row {
-  display: grid;
-  grid-template-columns: 50% 25% 25%;
-  padding: 12px 20px;
-  border-bottom: 1px solid var(--border);
-  font-size: 13px;
-  gap: 16px;
-}
-
+.ch-row { display: grid; grid-template-columns: 50% 25% 25%; padding: 12px 20px; border-bottom: 1px solid var(--border); font-size: 13px; gap: 16px; }
 .ch-row:last-child { border-bottom: none; }
-
-.ch-head {
-  background: var(--surface-2);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-tertiary);
-  font-weight: 500;
-}
-
+.ch-head { background: var(--surface-2); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 500; }
 .ch-asset { color: var(--text-primary); }
-.ch-new { display: inline-block; padding: 1px 6px; margin-right: 6px; background: var(--teal); color: var(--bg); font-size: 9px; font-weight: 500; border-radius: 2px; letter-spacing: 0.05em; vertical-align: middle; }
 .ch-qty { font-family: 'JetBrains Mono', monospace; color: var(--text-secondary); font-size: 12px; }
 .ch-code { font-family: 'JetBrains Mono', monospace; color: var(--text-tertiary); font-size: 11px; }
 
 .memo-box { padding: 20px 22px; background: var(--surface); border: 1px solid var(--border); margin-bottom: 14px; }
-
-.memo-input {
-  width: 100%;
-  min-height: 80px;
-  padding: 12px 14px;
-  background: var(--bg);
-  border: 1px solid var(--border-strong);
-  color: var(--text-primary);
-  font-family: inherit;
-  font-size: 13px;
-  line-height: 1.6;
-  resize: vertical;
-  border-radius: 2px;
-}
-
+.memo-input { width: 100%; min-height: 80px; padding: 12px 14px; background: var(--bg); border: 1px solid var(--border-strong); color: var(--text-primary); font-family: inherit; font-size: 13px; line-height: 1.6; resize: vertical; border-radius: 2px; }
 .memo-input:focus { outline: none; border-color: var(--gold); }
 .memo-input::placeholder { color: var(--text-tertiary); }
-
-.memo-add {
-  margin-top: 10px;
-  padding: 8px 18px;
-  background: var(--text-primary);
-  color: var(--bg);
-  border: none;
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 500;
-  cursor: pointer;
-  border-radius: 2px;
-  transition: opacity 0.15s;
-}
-
+.memo-add { margin-top: 10px; padding: 8px 18px; background: var(--text-primary); color: var(--bg); border: none; font-family: inherit; font-size: 12px; font-weight: 500; cursor: pointer; border-radius: 2px; transition: opacity 0.15s; }
 .memo-add:hover { opacity: 0.85; }
 .memo-list { list-style: none; margin-bottom: 36px; }
-
-.memo-item {
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  gap: 14px;
-  align-items: start;
-  padding: 12px 16px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  margin-bottom: 6px;
-}
-
+.memo-item { display: grid; grid-template-columns: 1fr auto auto; gap: 14px; align-items: start; padding: 12px 16px; background: var(--surface); border: 1px solid var(--border); margin-bottom: 6px; }
 .memo-text { font-size: 13px; line-height: 1.5; }
 .memo-meta { font-size: 11px; color: var(--text-tertiary); white-space: nowrap; padding-top: 2px; font-family: 'JetBrains Mono', monospace; }
-
-.memo-del {
-  padding: 0;
-  width: 22px;
-  height: 22px;
-  background: transparent;
-  border: none;
-  color: var(--text-tertiary);
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 2px;
-  transition: all 0.15s;
-}
-
+.memo-del { padding: 0; width: 22px; height: 22px; background: transparent; border: none; color: var(--text-tertiary); cursor: pointer; font-size: 16px; border-radius: 2px; transition: all 0.15s; }
 .memo-del:hover { background: var(--surface-hover); color: var(--up); }
+.memo-empty { padding: 24px; text-align: center; font-size: 12px; color: var(--text-tertiary); background: var(--surface); border: 1px dashed var(--border-strong); margin-bottom: 36px; }
 
-.memo-empty {
-  padding: 24px;
-  text-align: center;
-  font-size: 12px;
-  color: var(--text-tertiary);
-  background: var(--surface);
-  border: 1px dashed var(--border-strong);
-  margin-bottom: 36px;
-}
-
-.update-btn {
-  width: 100%;
-  padding: 18px 24px;
-  background: var(--gold);
-  color: var(--bg);
-  border: none;
-  font-family: inherit;
-  cursor: pointer;
-  border-radius: 2px;
-  transition: opacity 0.15s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-}
-
+.update-btn { width: 100%; padding: 18px 24px; background: var(--gold); color: var(--bg); border: none; font-family: inherit; cursor: pointer; border-radius: 2px; transition: opacity 0.15s; display: flex; flex-direction: column; align-items: center; gap: 4px; }
 .update-btn:hover { opacity: 0.9; }
 .update-btn .ub-main { font-size: 14px; font-weight: 500; letter-spacing: 0.02em; }
 .update-btn .ub-sub { font-size: 11px; opacity: 0.7; }
 
-.update-hint {
-  margin-top: 14px;
-  padding: 16px 20px;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  font-size: 12px;
-  color: var(--text-secondary);
-  line-height: 1.65;
-}
-
+.update-hint { margin-top: 14px; padding: 16px 20px; background: var(--surface-2); border: 1px solid var(--border); font-size: 12px; color: var(--text-secondary); line-height: 1.65; }
 .update-hint strong { color: var(--text-primary); font-weight: 500; }
+.update-hint code { font-family: 'JetBrains Mono', monospace; font-size: 11px; background: var(--surface); padding: 1px 6px; border-radius: 2px; }
 
-.update-hint code {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  background: var(--surface);
-  padding: 1px 6px;
-  border-radius: 2px;
-}
-
-.toast {
-  position: fixed;
-  bottom: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 12px 24px;
-  background: var(--teal);
-  color: var(--bg);
-  font-size: 13px;
-  font-weight: 500;
-  border-radius: 2px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s;
-  z-index: 200;
-}
-
+.toast { position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%); padding: 12px 24px; background: var(--teal); color: var(--bg); font-size: 13px; font-weight: 500; border-radius: 2px; opacity: 0; pointer-events: none; transition: opacity 0.25s; z-index: 200; }
 .toast.show { opacity: 1; }
 
-.tab-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(10, 10, 12, 0.88);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  border-top: 1px solid var(--border);
-  z-index: 100;
-  padding-bottom: env(safe-area-inset-bottom);
-}
-
-.tab-bar-inner {
-  max-width: 1160px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.tab-btn {
-  padding: 12px 6px 14px;
-  background: transparent;
-  border: none;
-  color: var(--text-tertiary);
-  font-family: inherit;
-  font-size: 11px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  transition: color 0.15s;
-  position: relative;
-}
-
+.tab-bar { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(10, 10, 12, 0.88); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); border-top: 1px solid var(--border); z-index: 100; padding-bottom: env(safe-area-inset-bottom); }
+.tab-bar-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); }
+.tab-btn { padding: 12px 6px 14px; background: transparent; border: none; color: var(--text-tertiary); font-family: inherit; font-size: 11px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 5px; transition: color 0.15s; position: relative; }
 .tab-btn:hover { color: var(--text-secondary); }
 .tab-btn.active { color: var(--gold); }
+.tab-btn.active::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 24px; height: 2px; background: var(--gold); }
+.tab-btn svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 
-.tab-btn.active::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 24px;
-  height: 2px;
-  background: var(--gold);
-}
-
-.tab-btn svg {
-  width: 20px;
-  height: 20px;
-  stroke: currentColor;
-  fill: none;
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-footer {
-  margin-top: 60px;
-  padding-top: 28px;
-  border-top: 1px solid var(--border);
-  font-size: 11px;
-  color: var(--text-tertiary);
-  line-height: 1.7;
-}
-
+footer { margin-top: 60px; padding-top: 28px; border-top: 1px solid var(--border); font-size: 11px; color: var(--text-tertiary); line-height: 1.7; }
 footer .disclaimer { max-width: 680px; margin-bottom: 12px; }
 footer .sig { font-family: 'Fraunces', serif; font-style: italic; font-size: 12px; color: var(--text-secondary); }
 
@@ -567,11 +199,7 @@ footer .sig { font-family: 'Fraunces', serif; font-style: italic; font-size: 12p
   .theme-grid { grid-template-columns: 1fr; }
   .events-grid { grid-template-columns: 1fr; gap: 40px; }
   .holdings-head { display: none; }
-  .h-main {
-    grid-template-columns: 1fr auto;
-    grid-template-areas: "asset badge" "reason reason";
-    gap: 8px 12px;
-  }
+  .h-main { grid-template-columns: 1fr auto; grid-template-areas: "asset badge" "reason reason"; gap: 8px 12px; }
   .h-asset { grid-area: asset; }
   .h-badge { grid-area: badge; }
   .h-reason { grid-area: reason; }
@@ -600,19 +228,17 @@ footer .sig { font-family: 'Fraunces', serif; font-style: italic; font-size: 12p
 <div class="container">
 
 <header>
-  <div>
-    <div class="brand">Stock Brief</div>
-  </div>
+  <div><div class="brand">Stock Brief</div></div>
   <div class="meta">
-    <div class="meta-date">2026.04.23 THU</div>
-    <div>기준 · 4월 22일(수) 종가</div>
+    <div class="meta-date">2026.04.30 THU</div>
+    <div>기준 · 4월 29일(수) 종가</div>
   </div>
 </header>
 
 <div class="tab-pane active" id="pane-briefing">
   <div class="tldr">
     <div class="tldr-label">오늘의 한 줄</div>
-    <strong>🆕 오늘 일본 ETF 2종 신규 진입</strong> — 지역 분산 첫 발, 타이밍 좋음 (BOJ 회의 D-6). 시장은 <strong>이란 휴전 무기한 연장</strong> 영향으로 S&P·나스닥·코스피 모두 사상 최고가. <strong>4/29 FOMC</strong>가 분기점이니 일본 포지션 2차 매수는 FOMC·BOJ 결과 확인 후 권장.
+    🚨 <strong>지난 주 대비 분위기 급반전.</strong> 트럼프 협상 거부로 <strong>이란 휴전 사실상 깨짐</strong> → WTI <strong>$92→$107 (+16%)</strong>. FOMC 8-4 분열 동결(34년만 최다 dissent), BOJ도 매파적 hold로 <strong>6월 인상 가능성 74%</strong>. 미국증시 횡보, 한국·일본은 기록행진. <strong>금이 추매 트리거 진입</strong>, 일본 추매는 BOJ 인상 가시화로 신중히.
   </div>
 
   <section>
@@ -622,14 +248,14 @@ footer .sig { font-family: 'Fraunces', serif; font-style: italic; font-size: 12p
       <span class="sec-sub">Market at close</span>
     </div>
     <div class="snap">
-      <div class="snap-cell"><div class="sn-name">S&P 500</div><div class="sn-value">7,137.90</div><div class="sn-change up">▲ +1.05%</div><div class="sn-note">사상 최고 경신</div></div>
-      <div class="snap-cell"><div class="sn-name">Nasdaq</div><div class="sn-value">24,657.57</div><div class="sn-change up">▲ +1.64%</div><div class="sn-note">사상 최고 경신</div></div>
-      <div class="snap-cell"><div class="sn-name">KOSPI</div><div class="sn-value">6,417.93</div><div class="sn-change up">▲ +0.46%</div><div class="sn-note">6,400 첫 돌파</div></div>
-      <div class="snap-cell"><div class="sn-name">금 (oz)</div><div class="sn-value">$4,758.20</div><div class="sn-change down">▼ -0.79%</div><div class="sn-note">안전자산 수요 완화</div></div>
-      <div class="snap-cell"><div class="sn-name">은 (oz)</div><div class="sn-value">$77.70</div><div class="sn-change up">▲ +1.43%</div><div class="sn-note">높은 변동성 유지</div></div>
-      <div class="snap-cell"><div class="sn-name">WTI 원유</div><div class="sn-value">$92.60</div><div class="sn-change up">▲ +3.27%</div><div class="sn-note">휴전 연장에도 고공행진</div></div>
-      <div class="snap-cell"><div class="sn-name">NVDA</div><div class="sn-value">$202.06</div><div class="sn-change up">▲ +0.19%</div><div class="sn-note">시총 $4.9T 돌파</div></div>
-      <div class="snap-cell"><div class="sn-name">VIX 공포지수</div><div class="sn-value">18.92</div><div class="sn-change down">▼ -2.97%</div><div class="sn-note">이전보다 소폭 상승</div></div>
+      <div class="snap-cell"><div class="sn-name">S&P 500</div><div class="sn-value">7,135.95</div><div class="sn-change down">▼ -0.04%</div><div class="sn-note">신고점 후 횡보</div></div>
+      <div class="snap-cell"><div class="sn-name">Nasdaq</div><div class="sn-value">24,673.24</div><div class="sn-change up">▲ +0.04%</div><div class="sn-note">빅테크 실적 대기</div></div>
+      <div class="snap-cell"><div class="sn-name">KOSPI</div><div class="sn-value">6,690.90</div><div class="sn-change up">▲ +4.3%</div><div class="sn-note">사상 최고 행진</div></div>
+      <div class="snap-cell"><div class="sn-name">금 (oz)</div><div class="sn-value">$4,591</div><div class="sn-change down">▼ -3.5%</div><div class="sn-note">추매 트리거 진입</div></div>
+      <div class="snap-cell"><div class="sn-name">은 (oz)</div><div class="sn-value">$77.70</div><div class="sn-change down">→ 횡보</div><div class="sn-note">분할 매수 유효</div></div>
+      <div class="snap-cell"><div class="sn-name">WTI 원유</div><div class="sn-value">$107.37</div><div class="sn-change up">▲ +16.0%</div><div class="sn-note">휴전 사실상 깨짐</div></div>
+      <div class="snap-cell"><div class="sn-name">USD/JPY</div><div class="sn-value">160.00</div><div class="sn-change up">▲ +1.5%</div><div class="sn-note">엔 추가 약세</div></div>
+      <div class="snap-cell"><div class="sn-name">VIX 공포지수</div><div class="sn-value">18.81</div><div class="sn-change down">→ 안정</div><div class="sn-note">의외로 차분</div></div>
     </div>
   </section>
 </div>
@@ -644,25 +270,25 @@ footer .sig { font-family: 'Fraunces', serif; font-style: italic; font-size: 12p
     <div class="holdings" id="holdings-table">
       <div class="holdings-head"><div>자산 그룹</div><div>시그널</div><div>근거</div><div></div></div>
 
-      <div class="h-row"><div class="h-main"><div class="h-asset"><span class="h-new-badge">NEW</span>일본 ETF 2종 (TIGER·KODEX)</div><div class="h-badge"><span class="badge b-buy">추매</span></div><div class="h-reason">4/23 신규 진입(각 1주). BOJ 회의 앞 분할 매집 시점.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">현재 진입 상황</span><span class="dv">TIGER 니케이225 <span class="num">1주</span> + KODEX TOPIX100 <span class="num">1주</span>. 포트 내 비중 <span class="num">&lt;1%</span>.</span></div><div class="h-detail-row"><span class="dl">권장 매수 비율</span><span class="dv">목표 비중 <span class="num">5~10%</span>까지 <span class="num">2~3회</span> 추가 분할 매수</span></div><div class="h-detail-row"><span class="dl">왜 추매인가</span><span class="dv">지금 비중은 상징적 수준. 실제 분산 효과 얻으려면 포지션 키워야 함.</span></div><div class="h-detail-row"><span class="dl">타이밍</span><span class="dv"><span class="num">4/28–29</span> BOJ 회의 결과 확인 후 2차 매수 권장. 매파 → 엔화 강세 조정 시 매수 / 비둘기 → 곧바로 추매.</span></div><div class="h-detail-row"><span class="dl">두 ETF 비교</span><span class="dv">니케이225는 대형주 225개, TOPIX100은 초대형주 100개. 보완 관계이니 1:1 비율로 매수해도 OK.</span></div><div class="h-detail-row"><span class="dl">축소 전환 조건</span><span class="dv">엔화 급등 + BOJ 깜짝 매파 + 주가 약세 3박자 동시 발생 시.</span></div></div></div></div>
+      <div class="h-row"><div class="h-main"><div class="h-asset"><span class="h-changed-badge">변경</span>금 ETF 2종 (ACE·TIGER)</div><div class="h-badge"><span class="badge b-buy">추매</span></div><div class="h-reason">$4,591로 -3.5% 조정. 기존 추매 조건($4,650 이하) 도달.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">시그널 변경</span><span class="dv"><strong style="color:var(--up)">홀드 → 추매</strong>. 지난 주 설정한 트리거($4,650 이하)에 진입.</span></div><div class="h-detail-row"><span class="dl">권장 매수 비율</span><span class="dv">기존 보유 대비 <span class="num">10~20%</span> 추가, <span class="num">2~3회 분할</span></span></div><div class="h-detail-row"><span class="dl">왜 지금인가</span><span class="dv">휴전 깨짐 + 인플레 지속 + 달러 약세 + JPM 연말 <span class="num">$5,000</span> 전망 유효. 안전자산 수요 곧 재유입 가능.</span></div><div class="h-detail-row"><span class="dl">타이밍</span><span class="dv">$4,500~4,600 구간 분할 매수. <span class="num">$4,400</span> 이하 추가 조정 시 한 차례 더.</span></div><div class="h-detail-row"><span class="dl">홀드 복귀 조건</span><span class="dv"><span class="num">$4,800</span> 회복 후 안정화.</span></div></div></div></div>
 
-      <div class="h-row"><div class="h-main"><div class="h-asset">S&P 500 ETF 3종</div><div class="h-badge"><span class="badge b-hold">홀드</span></div><div class="h-reason">사상 최고가 재경신. 추매하기엔 과열, 팔기엔 추세 강함.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">권장 액션</span><span class="dv">건드리지 말고 관망. FOMC까지 <span class="num">6일</span> 남았고 과열 우려.</span></div><div class="h-detail-row"><span class="dl">추매 전환 조건</span><span class="dv">S&P <span class="num">7,000</span> 하향 이탈 후 안정화, 또는 <span class="num">4/29</span> FOMC 비둘기 톤.</span></div><div class="h-detail-row"><span class="dl">차익 전환 조건</span><span class="dv">FOMC 매파적 시그널 + VIX <span class="num">22</span> 이상 급등.</span></div></div></div></div>
+      <div class="h-row"><div class="h-main"><div class="h-asset">일본 ETF 2종 (TIGER·KODEX)</div><div class="h-badge"><span class="badge b-hold">홀드</span></div><div class="h-reason"><span class="h-changed-badge">변경</span>BOJ 매파 + 엔/달러 160 돌파. 6월 인상 시까지 추매 보류.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">시그널 변경</span><span class="dv"><strong style="color:var(--up)">추매 → 홀드</strong>. BOJ 회의 결과로 단기 환경이 복잡해짐.</span></div><div class="h-detail-row"><span class="dl">왜 일시 홀드인가</span><span class="dv">BOJ가 인플레 전망 <span class="num">2.8%</span>로 상향 + 3명이 인상 주장 → <span class="num">6월 16일</span> 인상 가능성 <span class="num">74%</span>. 인상되면 엔 강세 → 일본주 단기 약세 가능.</span></div><div class="h-detail-row"><span class="dl">반대로 좋은 측면</span><span class="dv">엔/달러 160은 정부 개입 임계선. BOJ가 통화 방어 의지 강함 → 중장기 엔 안정 신호.</span></div><div class="h-detail-row"><span class="dl">2차 매수 조건</span><span class="dv">① <span class="num">6/16</span> BOJ 인상 발표 후 일본 ETF <span class="num">3~5%</span> 조정 시, 또는 ② 인상 안 하면 환율 안정 후 재진입.</span></div><div class="h-detail-row"><span class="dl">현 비중</span><span class="dv">각 1주, 합계 비중 <span class="num">&lt;1%</span>. 현재 미실현 손익은 거의 없음 (진입가 부근).</span></div></div></div></div>
 
-      <div class="h-row"><div class="h-main"><div class="h-asset">나스닥 100 ETF 2종</div><div class="h-badge"><span class="badge b-trim">차익 일부</span></div><div class="h-reason">사상 최고 또 경신 (24,657). 과열 해소 타이밍.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">권장 매도 비율</span><span class="dv">보유 수량의 <span class="num">15~25%</span> (아직 차익실현 안했다면)</span></div><div class="h-detail-row"><span class="dl">왜 여전히 차익 일부인가</span><span class="dv">지난 주 권고 이후 나스닥 <span class="num">+0.8%</span> 추가 상승. 차익 실현 기회 유효.</span></div><div class="h-detail-row"><span class="dl">타이밍</span><span class="dv">FOMC 전(<span class="num">4/29</span>) 매도 권장. 이벤트 전 리스크 축소 목적.</span></div><div class="h-detail-row"><span class="dl">홀드 복귀 조건</span><span class="dv"><span class="num">5%</span> 조정 후 안정화 (<span class="num">23,400</span> 지지 확인).</span></div></div></div></div>
+      <div class="h-row"><div class="h-main"><div class="h-asset">S&P 500 ETF 3종</div><div class="h-badge"><span class="badge b-hold">홀드</span></div><div class="h-reason">FOMC 매파적 hold 후 신고점 부근 횡보. 빅테크 실적 대기.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">권장 액션</span><span class="dv">관망. <span class="num">4명 dissent</span> + 인플레 우려로 인하 기대 후퇴, 신고점 후 차익실현 압력 증가.</span></div><div class="h-detail-row"><span class="dl">추매 전환 조건</span><span class="dv">S&P <span class="num">6,950</span> 하향 이탈 + 안정화 (5% 조정), 또는 PCE(<span class="num">4/30</span>) 결과 양호.</span></div><div class="h-detail-row"><span class="dl">차익 전환 조건</span><span class="dv">유가 <span class="num">$115</span> 돌파 + VIX <span class="num">22</span> 상회 + 빅테크 실적 부진.</span></div></div></div></div>
 
-      <div class="h-row"><div class="h-main"><div class="h-asset">TIGER 미국배당다우존스</div><div class="h-badge"><span class="badge b-hold">홀드</span></div><div class="h-reason">다우 49,490 신고점 근접. 배당주 꾸준한 자금 유입.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">권장 액션</span><span class="dv">현 포지션 유지. 성장주 대비 변동성 낮아 방어적 비중 역할.</span></div><div class="h-detail-row"><span class="dl">추매 전환 조건</span><span class="dv">FOMC 매파 + 성장주 조정 시 자금 순환 수혜.</span></div><div class="h-detail-row"><span class="dl">차익 전환 조건</span><span class="dv">다우 <span class="num">50,000</span> 돌파 + VIX 급등 동반.</span></div></div></div></div>
+      <div class="h-row"><div class="h-main"><div class="h-asset">나스닥 100 ETF 2종</div><div class="h-badge"><span class="badge b-trim">차익 일부</span></div><div class="h-reason">OpenAI 매출 미스로 AI 섹터 균열 시작. 차익실현 절호의 기회.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">권장 매도 비율</span><span class="dv">보유 수량의 <span class="num">20~30%</span> (강도 상향 — 기존 15-25%에서)</span></div><div class="h-detail-row"><span class="dl">강도 상향 이유</span><span class="dv">반도체 18일 연속 상승 후 <span class="num">4/28</span> WSJ 보도(OpenAI 매출 미달)로 첫 균열. 빅테크 실적 4종 발표 임박, 가이던스 리스크 큼.</span></div><div class="h-detail-row"><span class="dl">타이밍</span><span class="dv">지금 즉시 또는 빅테크 실적 발표 직전(<span class="num">5/1</span>까지)에 분할 매도. 더 이상 미루지 말 것.</span></div><div class="h-detail-row"><span class="dl">홀드 복귀 조건</span><span class="dv"><span class="num">23,500</span> 근처 지지 확인 + AI 자본지출 가이던스 명확화.</span></div></div></div></div>
 
-      <div class="h-row"><div class="h-main"><div class="h-asset">PLUS 고배당주</div><div class="h-badge"><span class="badge b-hold">홀드</span></div><div class="h-reason">코스피 6,400 돌파 돌입! 외국인 대규모 순매수 재개.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">권장 액션</span><span class="dv">현 포지션 유지. 코스피 강세 이후 이제 테마·성장주가 먼저 달림. 고배당주는 후행 수혜 기대.</span></div><div class="h-detail-row"><span class="dl">추매 전환 조건</span><span class="dv">성장주 조정 + 자금이 배당·밸류주로 로테이션 신호.</span></div><div class="h-detail-row"><span class="dl">차익 전환 조건</span><span class="dv">외국인 순매도 전환 + 코스피 <span class="num">6,300</span> 하향 이탈.</span></div><div class="h-detail-row"><span class="dl">특이사항</span><span class="dv">지난 주(4/17) <span class="num">5,967</span>에서 <span class="num">+7.5%</span> 랠리. 코스피 추세 확실히 반전.</span></div></div></div></div>
+      <div class="h-row"><div class="h-main"><div class="h-asset">TIGER 미국배당다우존스</div><div class="h-badge"><span class="badge b-hold">홀드</span></div><div class="h-reason">다우 5일 연속 하락 (48,861). 스태그플레이션 우려에 약세.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">권장 액션</span><span class="dv">현 포지션 유지. 다우는 약세지만 배당 매력은 여전 (10년물 <span class="num">4.41%</span>).</span></div><div class="h-detail-row"><span class="dl">추매 전환 조건</span><span class="dv">다우 <span class="num">47,500</span> 이하 조정 + Fed 비둘기 시그널 동반.</span></div><div class="h-detail-row"><span class="dl">차익 전환 조건</span><span class="dv">유가 안정 + 다우 <span class="num">50,000</span> 돌파 시.</span></div></div></div></div>
 
-      <div class="h-row"><div class="h-main"><div class="h-asset">금 ETF 2종 (ACE·TIGER)</div><div class="h-badge"><span class="badge b-hold">홀드</span></div><div class="h-reason">$4,758로 소폭 조정. 휴전 연장으로 안전자산 수요 완화.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">권장 액션</span><span class="dv">현 비중 유지. 지난 주 <span class="num">$4,879</span> 대비 <span class="num">-2.5%</span> 조정, 장기 상승 추세 유효.</span></div><div class="h-detail-row"><span class="dl">추매 전환 조건</span><span class="dv"><span class="num">$4,650</span> 이하 추가 조정 시 분할 진입.</span></div><div class="h-detail-row"><span class="dl">차익 전환 조건</span><span class="dv"><span class="num">$5,000</span> 재돌파 + 모멘텀 약화 시.</span></div></div></div></div>
+      <div class="h-row"><div class="h-main"><div class="h-asset">PLUS 고배당주</div><div class="h-badge"><span class="badge b-hold">홀드</span></div><div class="h-reason">코스피 6,690으로 +4.3% 추가 상승. 외국인 매수 지속.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">권장 액션</span><span class="dv">현 포지션 유지. 한국 시장이 미국과 디커플링되어 강세 지속 — 매도 이유 없음.</span></div><div class="h-detail-row"><span class="dl">최근 흐름</span><span class="dv">반도체→방산·에너지·엔터 등 섹터 순환매. 지수는 7,000선 시야.</span></div><div class="h-detail-row"><span class="dl">차익 전환 조건</span><span class="dv">외국인 순매도 전환 + 코스피 <span class="num">6,500</span> 하향 이탈.</span></div></div></div></div>
 
-      <div class="h-row"><div class="h-main"><div class="h-asset">은 (ABERDEEN SIVR)</div><div class="h-badge"><span class="badge b-buy">추매</span></div><div class="h-reason">$77~80 변동성 큼. 전쟁 시작 이후 -17%, 저가 매수 기회.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">권장 매수 비율</span><span class="dv">여유 현금의 <span class="num">5~10%</span>를 <span class="num">4~5회 분할</span> (변동성 커서 분할 강화)</span></div><div class="h-detail-row"><span class="dl">타이밍</span><span class="dv">$78 이하 진입, 이상이면 대기. 정액 매수 전략 유리.</span></div><div class="h-detail-row"><span class="dl">펀더멘털</span><span class="dv">6년 연속 공급부족 지속, 산업 수요(태양광·전자) 견조.</span></div><div class="h-detail-row"><span class="dl">홀드 전환 조건</span><span class="dv"><span class="num">$90</span> 돌파 후 횡보.</span></div><div class="h-detail-row"><span class="dl">축소 전환 조건</span><span class="dv"><span class="num">$72</span> 하향 이탈 (단기 지지선 훼손).</span></div></div></div></div>
+      <div class="h-row"><div class="h-main"><div class="h-asset">은 (ABERDEEN SIVR)</div><div class="h-badge"><span class="badge b-buy">추매</span></div><div class="h-reason">$77 부근 횡보. 공급 부족 펀더멘털 변함없음.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">권장 매수 비율</span><span class="dv">여유 현금의 <span class="num">5~10%</span>를 <span class="num">4~5회 분할</span></span></div><div class="h-detail-row"><span class="dl">타이밍</span><span class="dv">$78 이하 진입. 정액 매수 전략 유지.</span></div><div class="h-detail-row"><span class="dl">현재 상황</span><span class="dv">전쟁 시작 이후 -17%지만 <span class="num">6년 연속 공급부족</span> 펀더멘털 유효. 산업 수요(태양광·전자) 견조.</span></div><div class="h-detail-row"><span class="dl">홀드 전환 조건</span><span class="dv"><span class="num">$90</span> 돌파 후 횡보.</span></div><div class="h-detail-row"><span class="dl">축소 전환 조건</span><span class="dv"><span class="num">$72</span> 하향 이탈.</span></div></div></div></div>
 
-      <div class="h-row"><div class="h-main"><div class="h-asset">TIGER 구리실물</div><div class="h-badge"><span class="badge b-trim">차익 일부</span></div><div class="h-reason">구리 $6.07/lb, 고점 부근. 중동 불안 따라 변동성 높음.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">권장 매도 비율</span><span class="dv">보유 수량의 <span class="num">20~30%</span> (아직 실행 안했다면)</span></div><div class="h-detail-row"><span class="dl">왜 여전히 차익 일부인가</span><span class="dv">AI 데이터센터·전기차 수요는 장기 긍정. 하지만 중동 이벤트 노이즈 큼.</span></div><div class="h-detail-row"><span class="dl">타이밍</span><span class="dv">반등 시 분할 매도. FOMC 전 리스크 축소.</span></div><div class="h-detail-row"><span class="dl">홀드 복귀 조건</span><span class="dv"><span class="num">$5.80/lb</span> 하향 후 안정화.</span></div></div></div></div>
+      <div class="h-row"><div class="h-main"><div class="h-asset">TIGER 구리실물</div><div class="h-badge"><span class="badge b-trim">차익 일부</span></div><div class="h-reason">중동 노이즈 + UAE의 OPEC+ 탈퇴 등 지정학 변동성 증가.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">권장 매도 비율</span><span class="dv">보유 수량의 <span class="num">20~30%</span> (아직 실행 안했다면)</span></div><div class="h-detail-row"><span class="dl">왜 여전히 차익 일부인가</span><span class="dv">AI 데이터센터 장기 수요는 여전히 긍정. 단, 단기 노이즈 + 글로벌 성장 둔화 우려 동반.</span></div><div class="h-detail-row"><span class="dl">타이밍</span><span class="dv">반등 시 분할 매도. 더 이상 미루지 말 것.</span></div><div class="h-detail-row"><span class="dl">홀드 복귀 조건</span><span class="dv"><span class="num">$5.80/lb</span> 하향 후 안정화.</span></div></div></div></div>
 
-      <div class="h-row"><div class="h-main"><div class="h-asset">MMF · 미국초단기국채</div><div class="h-badge"><span class="badge b-hold">홀드</span></div><div class="h-reason">FOMC 3.50~3.75% 동결 기정사실. 방어 포지션 유지.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">권장 액션</span><span class="dv">이번 주 FOMC 이벤트 리스크 대비 대기 자금으로 활용.</span></div><div class="h-detail-row"><span class="dl">추매 전환 조건</span><span class="dv">VIX <span class="num">22</span> 상회 + 시장 불안 확산 시.</span></div><div class="h-detail-row"><span class="dl">차익 전환 조건</span><span class="dv">FOMC에서 연내 금리 인하 시사 시 → 위험자산 재배분.</span></div></div></div></div>
+      <div class="h-row"><div class="h-main"><div class="h-asset"><span class="h-changed-badge">변경</span>MMF · 미국초단기국채</div><div class="h-badge"><span class="badge b-buy">추매</span></div><div class="h-reason">FOMC 매파 hold + 인하 기대 후퇴 → 단기채 캐리 매력 증가.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">시그널 변경</span><span class="dv"><strong style="color:var(--up)">홀드 → 추매</strong>. FOMC 결과로 단기금리 환경이 더 매력적.</span></div><div class="h-detail-row"><span class="dl">권장 매수 비율</span><span class="dv">여유 현금의 <span class="num">10~15%</span> (방어 강화 + 캐리 수익)</span></div><div class="h-detail-row"><span class="dl">왜 지금인가</span><span class="dv">① 인하 기대 후퇴로 <span class="num">3.5%대</span> 단기 수익률 장기간 유지 가능. ② 빅테크 실적·휴전·PCE 등 단기 이벤트 리스크 대비 자금 필요. ③ 10년물 <span class="num">4.41%</span> 추가 상승 가능성.</span></div><div class="h-detail-row"><span class="dl">타이밍</span><span class="dv">즉시 또는 분할. 시장이 추가 조정될 때 위험자산 매수 자금으로 활용.</span></div><div class="h-detail-row"><span class="dl">차익 전환 조건</span><span class="dv">FOMC가 인하 시사 시 → 위험자산 재배분.</span></div></div></div></div>
 
-      <div class="h-row"><div class="h-main"><div class="h-asset">엔비디아 (NVDA)</div><div class="h-badge"><span class="badge b-hold">홀드</span></div><div class="h-reason">$202, 52주 고점 근접. 비중 미미해 액션 의미 없음.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">권장 액션</span><span class="dv">현 비중(<span class="num">0.003주</span>) 유지. 나스닥100 ETF로 이미 노출 있음.</span></div><div class="h-detail-row"><span class="dl">포지션 확대 원하면</span><span class="dv">분석가 평균 목표가 <span class="num">$268</span>. 본격 매수는 조정 대기.</span></div><div class="h-detail-row"><span class="dl">주요 이벤트</span><span class="dv"><span class="num">5/20</span> Q1 실적 (다음 달).</span></div></div></div></div>
+      <div class="h-row"><div class="h-main"><div class="h-asset">엔비디아 (NVDA)</div><div class="h-badge"><span class="badge b-hold">홀드</span></div><div class="h-reason">$202 부근. OpenAI 미스 후 -1.79%, 5/20 실적 대기.</div><div class="h-arrow">▼</div></div><div class="h-detail"><div class="h-detail-grid"><div class="h-detail-row"><span class="dl">권장 액션</span><span class="dv">현 비중(<span class="num">0.003주</span>) 유지. 나스닥100 ETF로 충분히 노출.</span></div><div class="h-detail-row"><span class="dl">최근 흐름</span><span class="dv"><span class="num">10/29</span> 시총 <span class="num">$5T</span> 첫 돌파 후 조정. 4/28 OpenAI 매출 미스에 -1.79%.</span></div><div class="h-detail-row"><span class="dl">주요 이벤트</span><span class="dv"><span class="num">5/20</span> Q1 실적. 그 전까지 시장 흐름 따라감.</span></div></div></div></div>
     </div>
   </section>
 </div>
@@ -681,98 +307,98 @@ footer .sig { font-family: 'Fraunces', serif; font-style: italic; font-size: 12p
     </div>
 
     <div class="theme-grid" id="tgrid">
-      <div class="t-card" data-heat="rise" data-rec="strong">
+      <div class="t-card" data-heat="hot" data-rec="strong">
         <div class="t-main">
-          <div class="t-head"><div class="t-title">일본 대형주 <span class="h-new-badge">진입 완료</span></div><div class="t-badges"><span class="badge rec-strong">★★★ 적극</span><span class="badge heat-rise">상승 중</span><span class="t-arrow">▼</span></div></div>
-          <div class="t-why"><strong style="color:var(--text-primary)">4/23 1주씩 2종 진입 완료.</strong> 목표 비중(5~10%)까지 추가 매집 단계. BOJ 회의가 다음 촉매.</div>
-          <div class="t-sec" data-region="overseas"><div class="t-lbl">대표 종목 (일본)</div><div class="t-tic">미쓰비시상사 · 이토추 · 도요타 · 소니</div></div>
-          <div class="t-sec" data-region="domestic"><div class="t-lbl">보유 중인 한국 ETF</div><div class="t-tic">TIGER 일본니케이225 · KODEX 일본TOPIX100</div></div>
+          <div class="t-head"><div class="t-title">글로벌 방산 <span class="h-changed-badge">상향</span></div><div class="t-badges"><span class="badge rec-strong">★★★ 적극</span><span class="badge heat-hot">뜨거움</span><span class="t-arrow">▼</span></div></div>
+          <div class="t-why"><strong style="color:var(--text-primary)">휴전 사실상 깨짐.</strong> 트럼프 협상 거부 + 호르무즈 봉쇄 유지 + 헤즈볼라 휴전 거부 → 지정학 리스크 재점화.</div>
+          <div class="t-sec" data-region="overseas"><div class="t-lbl">대표 종목 (미국)</div><div class="t-tic">LMT · RTX · NOC · HII · GD</div></div>
+          <div class="t-sec" data-region="domestic"><div class="t-lbl">한국 개별주·ETF</div><div class="t-tic">한화에어로스페이스 · 현대로템 · LIG넥스원 · KODEX K방산</div></div>
         </div>
         <div class="t-detail"><div class="h-detail-grid">
-          <div class="h-detail-row"><span class="dl">내 포트와 관계</span><span class="dv"><strong style="color:var(--teal)">✓ 진입 완료</strong>. 미국 편중 포트의 지역 분산 개시. 현재 비중 <span class="num">&lt;1%</span>.</span></div>
-          <div class="h-detail-row"><span class="dl">추천 이유</span><span class="dv">버핏 일본 상사주 매집 지속 · 달러 약세 · 미국 대비 저평가 3박자.</span></div>
-          <div class="h-detail-row"><span class="dl">남은 매수 여력</span><span class="dv">목표 <span class="num">5~10%</span>까지 <span class="num">2~3회</span> 분할 추매 필요.</span></div>
-          <div class="h-detail-row"><span class="dl">추천 타이밍</span><span class="dv">BOJ 회의(<span class="num">4/28–29</span>) 결과 확인 후 2차 매수 권장. 서두르지 말고 이벤트 반응 보고 결정.</span></div>
-          <div class="h-detail-row"><span class="dl">주의사항</span><span class="dv">BOJ 매파 깜짝 발표 시 엔화 강세 → 주가 단기 타격 가능. 이 경우 오히려 매수 기회.</span></div>
-        </div></div>
-      </div>
-
-      <div class="t-card" data-heat="hot" data-rec="watch">
-        <div class="t-main">
-          <div class="t-head"><div class="t-title">AI 반도체 슈퍼사이클</div><div class="t-badges"><span class="badge rec-watch">★ 관찰</span><span class="badge heat-hot">뜨거움</span><span class="t-arrow">▼</span></div></div>
-          <div class="t-why">4/22 반도체 섹터가 랠리 주도. 나스닥 신고점도 반도체가 견인. 과열은 지속 중.</div>
-          <div class="t-sec" data-region="overseas"><div class="t-lbl">대표 종목 (미국)</div><div class="t-tic">NVDA · AVGO · TSM · AMD · LRCX</div></div>
-          <div class="t-sec" data-region="domestic"><div class="t-lbl">한국 ETF 대응</div><div class="t-tic">TIGER 미국필라델피아반도체나스닥 · KODEX 미국반도체</div></div>
-        </div>
-        <div class="t-detail"><div class="h-detail-grid">
-          <div class="h-detail-row"><span class="dl">내 포트와 관계</span><span class="dv">이미 노출됨. 나스닥100 ETF에 반도체 비중 ~40%.</span></div>
-          <div class="h-detail-row"><span class="dl">추천 이유</span><span class="dv">펀더멘털 강하나 나스닥 신고점 경신 중. 추격매수 위험 커짐.</span></div>
-          <div class="h-detail-row"><span class="dl">추천 매수 비율</span><span class="dv">여유 현금의 <span class="num">0~3%</span> (극히 제한적)</span></div>
-          <div class="h-detail-row"><span class="dl">추천 타이밍</span><span class="dv">FOMC 후 조정(<span class="num">5~7%</span>) 기다렸다가 진입 권장.</span></div>
-          <div class="h-detail-row"><span class="dl">주의사항</span><span class="dv">신고점 경신 직후 추격 매수는 단기 손실 위험 큼.</span></div>
+          <div class="h-detail-row"><span class="dl">강도 변경</span><span class="dv"><strong style="color:var(--up)">★★ → ★★★</strong>. 1주 전 휴전 연장으로 약화됐던 모멘텀이 완전히 부활.</span></div>
+          <div class="h-detail-row"><span class="dl">내 포트와 관계</span><span class="dv">새로운 자산. 지정학 헤지 + 금/은과 보완.</span></div>
+          <div class="h-detail-row"><span class="dl">추천 매수 비율</span><span class="dv">여유 현금의 <span class="num">5~10%</span> (이전 3-7%에서 상향)</span></div>
+          <div class="h-detail-row"><span class="dl">추천 타이밍</span><span class="dv">즉시 진입 가능. 한국 방산주가 미국보다 상대 강도 우위 (코스피 강세 수혜).</span></div>
+          <div class="h-detail-row"><span class="dl">주의사항</span><span class="dv">갑작스런 휴전 재협상 시 단기 -10% 가능. 분할 매수 권장.</span></div>
         </div></div>
       </div>
 
       <div class="t-card" data-heat="rise" data-rec="strong">
         <div class="t-main">
           <div class="t-head"><div class="t-title">전력 인프라 · AI 데이터센터</div><div class="t-badges"><span class="badge rec-strong">★★★ 적극</span><span class="badge heat-rise">상승 중</span><span class="t-arrow">▼</span></div></div>
-          <div class="t-why"><strong style="color:var(--text-primary)">4/22 GE Vernova 어닝 서프 (+7%)</strong>. AI 데이터센터 전력 수요가 구조적 테마라는 확신 강화.</div>
+          <div class="t-why">지난 주 GE Vernova 어닝 서프(+7%) 후 숨고르기. 빅테크 AI 자본지출 발표가 다음 변곡점.</div>
           <div class="t-sec" data-region="overseas"><div class="t-lbl">대표 종목 (미국)</div><div class="t-tic">GEV · VST · CEG · NEE</div></div>
           <div class="t-sec" data-region="domestic"><div class="t-lbl">한국 ETF 대응</div><div class="t-tic">TIGER 미국AI전력인프라 · KODEX 미국전력인프라</div></div>
         </div>
         <div class="t-detail"><div class="h-detail-grid">
-          <div class="h-detail-row"><span class="dl">내 포트와 관계</span><span class="dv">완전히 새로운 자산. 일본에 이은 다음 분산 후보.</span></div>
-          <div class="h-detail-row"><span class="dl">추천 이유</span><span class="dv">실적으로 테마 증명됨. 구조적 수요 + 중위험 장기 스타일과 잘 맞음.</span></div>
+          <div class="h-detail-row"><span class="dl">내 포트와 관계</span><span class="dv">완전히 새로운 자산. 일본·방산에 이은 다음 분산 후보.</span></div>
+          <div class="h-detail-row"><span class="dl">추천 이유</span><span class="dv">구조적 수요 견고. 다만 빅테크 자본지출 가이던스 결과 봐야.</span></div>
           <div class="h-detail-row"><span class="dl">추천 매수 비율</span><span class="dv">여유 현금의 <span class="num">5~10%</span>, 3~4회 분할</span></div>
-          <div class="h-detail-row"><span class="dl">추천 타이밍</span><span class="dv">GEV 실적 후 단기 급등 있어 <span class="num">1~2주 숨고르기</span> 후 진입 권장.</span></div>
-          <div class="h-detail-row"><span class="dl">주의사항</span><span class="dv">섹터 비중 <span class="num">10%</span> 이내 제한 권장.</span></div>
+          <div class="h-detail-row"><span class="dl">추천 타이밍</span><span class="dv">빅테크 실적(<span class="num">4/30~5/1</span>) 발표 후. AI 자본지출 유지 확인되면 즉시 진입.</span></div>
+          <div class="h-detail-row"><span class="dl">주의사항</span><span class="dv">OpenAI 매출 미스가 AI 사이클 의구심으로 확산되면 단기 조정 가능.</span></div>
         </div></div>
       </div>
 
-      <div class="t-card" data-heat="rise" data-rec="buy">
+      <div class="t-card" data-heat="rise" data-rec="watch">
         <div class="t-main">
-          <div class="t-head"><div class="t-title">글로벌 방산</div><div class="t-badges"><span class="badge rec-buy">★★ 추천</span><span class="badge heat-rise">상승 중</span><span class="t-arrow">▼</span></div></div>
-          <div class="t-why">이란 휴전 연장으로 <strong style="color:var(--text-primary)">단기 모멘텀은 약화</strong>. 그러나 NATO 증액·장기 구조적 수요는 유효.</div>
-          <div class="t-sec" data-region="overseas"><div class="t-lbl">대표 종목 (미국)</div><div class="t-tic">LMT · RTX · NOC · HII · GD</div></div>
-          <div class="t-sec" data-region="domestic"><div class="t-lbl">한국 개별주·ETF</div><div class="t-tic">한화에어로스페이스 · 현대로템 · LIG넥스원 · KODEX K방산</div></div>
+          <div class="t-head"><div class="t-title">일본 대형주 <span class="h-changed-badge">신중</span></div><div class="t-badges"><span class="badge rec-watch">★ 관찰</span><span class="badge heat-rise">상승 중</span><span class="t-arrow">▼</span></div></div>
+          <div class="t-why">BOJ 매파적 hold + 6월 인상 가능성 74%. <strong style="color:var(--text-primary)">단기 환율 변수가 핵심.</strong></div>
+          <div class="t-sec" data-region="overseas"><div class="t-lbl">대표 종목 (일본)</div><div class="t-tic">미쓰비시상사 · 이토추 · 도요타 · 소니</div></div>
+          <div class="t-sec" data-region="domestic"><div class="t-lbl">보유 중인 한국 ETF</div><div class="t-tic">TIGER 일본니케이225 · KODEX 일본TOPIX100</div></div>
         </div>
         <div class="t-detail"><div class="h-detail-grid">
-          <div class="h-detail-row"><span class="dl">내 포트와 관계</span><span class="dv">새로운 자산. 지정학 헤지 역할.</span></div>
-          <div class="h-detail-row"><span class="dl">추천 이유</span><span class="dv">중장기 구조적 테마 유효. 단, 이번 주처럼 휴전 뉴스로 단기 조정 가능.</span></div>
-          <div class="h-detail-row"><span class="dl">추천 매수 비율</span><span class="dv">여유 현금의 <span class="num">3~7%</span></span></div>
-          <div class="h-detail-row"><span class="dl">추천 타이밍</span><span class="dv">휴전 뉴스로 조정 올 때 분할 진입. 서두를 필요 없음.</span></div>
-          <div class="h-detail-row"><span class="dl">주의사항</span><span class="dv">"평화 모드" 장기화 시 추가 조정 가능.</span></div>
+          <div class="h-detail-row"><span class="dl">강도 변경</span><span class="dv"><strong style="color:var(--up)">★★★ → ★</strong>. 진입 직후 환경이 복잡해짐.</span></div>
+          <div class="h-detail-row"><span class="dl">내 포트와 관계</span><span class="dv">진입 완료. 현재 비중 <span class="num">&lt;1%</span>, 추매 일시 보류.</span></div>
+          <div class="h-detail-row"><span class="dl">왜 신중인가</span><span class="dv">BOJ 인상 시 엔 강세 → 일본 ETF 단기 약세 가능. 인상 안 해도 엔 약세 지속으로 환차손 우려.</span></div>
+          <div class="h-detail-row"><span class="dl">추천 매수 비율</span><span class="dv">현 보유 유지, 추가 <span class="num">0%</span></span></div>
+          <div class="h-detail-row"><span class="dl">2차 매수 조건</span><span class="dv"><span class="num">6/16</span> BOJ 결정 후. 인상 + 일본 ETF <span class="num">3~5%</span> 조정 시 절호의 매수.</span></div>
+          <div class="h-detail-row"><span class="dl">중장기 시각</span><span class="dv">환헷지(H) 상품 검토 가치 ↑. 환변동 리스크 차단.</span></div>
+        </div></div>
+      </div>
+
+      <div class="t-card" data-heat="hot" data-rec="watch">
+        <div class="t-main">
+          <div class="t-head"><div class="t-title">AI 반도체 슈퍼사이클 <span class="h-changed-badge">균열</span></div><div class="t-badges"><span class="badge rec-watch">★ 관찰</span><span class="badge heat-hot">뜨거움</span><span class="t-arrow">▼</span></div></div>
+          <div class="t-why"><strong style="color:var(--text-primary)">OpenAI 매출 미스 보도(4/28)로 첫 균열.</strong> 18일 연속 상승 마감, 빅테크 실적이 분기점.</div>
+          <div class="t-sec" data-region="overseas"><div class="t-lbl">대표 종목 (미국)</div><div class="t-tic">NVDA · AVGO · TSM · AMD · LRCX</div></div>
+          <div class="t-sec" data-region="domestic"><div class="t-lbl">한국 ETF 대응</div><div class="t-tic">TIGER 미국필라델피아반도체나스닥 · KODEX 미국반도체</div></div>
+        </div>
+        <div class="t-detail"><div class="h-detail-grid">
+          <div class="h-detail-row"><span class="dl">내 포트와 관계</span><span class="dv">이미 노출됨. 차익 일부 권고 중인 나스닥100 ETF로 노출 줄이는 단계.</span></div>
+          <div class="h-detail-row"><span class="dl">최근 변화</span><span class="dv">반도체 18일 연속 상승 종료, NVDA -1.79%, 오라클 -3%, AMD/AVGO 동반 하락. AI 자본지출 지속성 의문 제기.</span></div>
+          <div class="h-detail-row"><span class="dl">추천 매수 비율</span><span class="dv"><span class="num">0%</span> (관찰)</span></div>
+          <div class="h-detail-row"><span class="dl">추천 타이밍</span><span class="dv">빅테크 실적(<span class="num">4/30~5/1</span>) 결과 확인 후 재평가. AI 자본지출 가이던스 견고하면 다시 ★ 상향 검토.</span></div>
+          <div class="h-detail-row"><span class="dl">주의사항</span><span class="dv">신규 진입 절대 금지. 5/20 NVDA 실적 전까지 변동성 큼.</span></div>
         </div></div>
       </div>
 
       <div class="t-card" data-heat="tact" data-rec="skip">
         <div class="t-main">
-          <div class="t-head"><div class="t-title">이란 휴전 리오프닝</div><div class="t-badges"><span class="badge rec-skip">─ 스킵</span><span class="badge heat-tact">단기 테마</span><span class="t-arrow">▼</span></div></div>
-          <div class="t-why">4/22 휴전 무기한 연장되며 <strong style="color:var(--text-primary)">이미 주가에 반영</strong>. 추가 상승 여력 제한.</div>
+          <div class="t-head"><div class="t-title">이란 휴전 리오프닝 <span class="h-changed-badge">소멸</span></div><div class="t-badges"><span class="badge rec-skip">─ 스킵</span><span class="badge heat-tact">소멸</span><span class="t-arrow">▼</span></div></div>
+          <div class="t-why"><strong style="color:var(--text-primary)">테마 자체가 사실상 소멸.</strong> 휴전 깨지고 호르무즈 봉쇄 유지, 항공·크루즈주 약세 전환.</div>
           <div class="t-sec" data-region="overseas"><div class="t-lbl">대표 종목 (미국)</div><div class="t-tic">DAL · UAL · RCL · CCL</div></div>
           <div class="t-sec" data-region="domestic"><div class="t-lbl">한국 개별주</div><div class="t-tic">대한항공 · 아시아나 · 하나투어</div></div>
         </div>
         <div class="t-detail"><div class="h-detail-grid">
-          <div class="h-detail-row"><span class="dl">내 포트와 관계</span><span class="dv">스타일 불일치. 중위험 장기 투자자에게 부적합.</span></div>
-          <div class="h-detail-row"><span class="dl">추천 이유</span><span class="dv">휴전 수혜 이미 가격 반영. 이제는 원유가 의외 재급등 시 리스크만 남음.</span></div>
-          <div class="h-detail-row"><span class="dl">추천 매수 비율</span><span class="dv"><span class="num">0%</span></span></div>
-          <div class="h-detail-row"><span class="dl">추천 타이밍</span><span class="dv">해당 없음.</span></div>
-          <div class="h-detail-row"><span class="dl">주의사항</span><span class="dv">이란이 2차 협상 거부 중 → 상황 재악화 시 항공주부터 타격.</span></div>
+          <div class="h-detail-row"><span class="dl">내 포트와 관계</span><span class="dv">진입 안한 게 정답. 만약 진입했다면 즉시 매도가 합리적.</span></div>
+          <div class="h-detail-row"><span class="dl">현재 상황</span><span class="dv">휴전 깨짐 + 유가 <span class="num">$107</span> + 항공유 가격 폭등 → 항공·크루즈주에 직격탄.</span></div>
+          <div class="h-detail-row"><span class="dl">추천 매수 비율</span><span class="dv"><span class="num">0%</span> · 카드 자체를 다음 업데이트 시 제거 검토.</span></div>
+          <div class="h-detail-row"><span class="dl">대안</span><span class="dv">반대 포지션인 <span class="num">방산</span>으로 자금 이동이 합리적.</span></div>
         </div></div>
       </div>
 
       <div class="t-card" data-heat="early" data-rec="watch">
         <div class="t-main">
           <div class="t-head"><div class="t-title">바이오 · 헬스케어</div><div class="t-badges"><span class="badge rec-watch">★ 관찰</span><span class="badge heat-early">초기 신호</span><span class="t-arrow">▼</span></div></div>
-          <div class="t-why">여전히 턴어라운드 대기 중. 2년 부진 후 기술적 반등 시그널 필요.</div>
+          <div class="t-why">여전히 턴어라운드 대기 중. 주말 시장 조정 시 방어주로 매력 부각 가능.</div>
           <div class="t-sec" data-region="overseas"><div class="t-lbl">대표 종목 (미국)</div><div class="t-tic">LLY · NVO · VRTX · REGN</div></div>
           <div class="t-sec" data-region="domestic"><div class="t-lbl">한국 ETF 대응</div><div class="t-tic">TIGER 미국바이오테크 · KODEX 미국헬스케어</div></div>
         </div>
         <div class="t-detail"><div class="h-detail-grid">
-          <div class="h-detail-row"><span class="dl">내 포트와 관계</span><span class="dv">포트에 없음. 분산 관점 긍정.</span></div>
-          <div class="h-detail-row"><span class="dl">추천 이유</span><span class="dv">구조적 턴어라운드 스토리 유효, 타이밍 지속 관찰 필요.</span></div>
+          <div class="h-detail-row"><span class="dl">내 포트와 관계</span><span class="dv">포트에 없음. 위험자산 전환 우려 시 방어 후보.</span></div>
+          <div class="h-detail-row"><span class="dl">추천 이유</span><span class="dv">스태그플레이션 우려 시 헬스케어 방어 매력 ↑. 단, 펀더멘털 신호는 아직 미약.</span></div>
           <div class="h-detail-row"><span class="dl">추천 매수 비율</span><span class="dv">지금 <span class="num">0%</span> (관찰), 신호 확인 후 <span class="num">3~5%</span></span></div>
-          <div class="h-detail-row"><span class="dl">추천 타이밍</span><span class="dv">XBI ETF <span class="num">20일선</span> 회복 후 1주 유지 시.</span></div>
+          <div class="h-detail-row"><span class="dl">추천 타이밍</span><span class="dv">XBI ETF <span class="num">20일선</span> 회복 + 1주 유지 시.</span></div>
           <div class="h-detail-row"><span class="dl">주의사항</span><span class="dv">개별주 임상 리스크. ETF 접근 권장.</span></div>
         </div></div>
       </div>
@@ -792,21 +418,22 @@ footer .sig { font-family: 'Fraunces', serif; font-style: italic; font-size: 12p
       <div>
         <div class="t-lbl" style="margin-bottom:14px;">다가오는 주요 이벤트</div>
         <div class="ev-list">
-          <div class="ev-item"><div class="ev-date">04.24 THU</div><div><div class="ev-title">미국 주간 실업청구</div><div class="ev-desc">노동시장 연착륙 여부 확인.</div></div></div>
-          <div class="ev-item ev-critical"><div class="ev-date">04.28 TUE</div><div><div class="ev-title">BOJ 회의 시작</div><div class="ev-desc"><strong style="color:var(--text-primary)">일본 ETF 보유 중이라 중요.</strong> 금리·양적완화 방향성.</div></div></div>
-          <div class="ev-item ev-critical"><div class="ev-date">04.29 WED</div><div><div class="ev-title">FOMC 금리 결정 · BOJ 발표</div><div class="ev-desc">3.50~3.75% 동결 예상. 파월 톤 + 일본 정책 전환 여부.</div></div></div>
-          <div class="ev-item"><div class="ev-date">04.30 THU</div><div><div class="ev-title">PCE 물가지수</div><div class="ev-desc">Fed 선호 인플레 지표.</div></div></div>
+          <div class="ev-item ev-critical"><div class="ev-date">04.30 THU</div><div><div class="ev-title">PCE 물가지수 (오늘)</div><div class="ev-desc">Fed 선호 인플레 지표. 매파 시그널 컨펌 또는 리버설 재료.</div></div></div>
+          <div class="ev-item ev-critical"><div class="ev-date">04.30~05.01</div><div><div class="ev-title">빅테크 4종 실적 발표</div><div class="ev-desc">MSFT · GOOGL · META · AMZN. AI 자본지출 가이던스가 핵심.</div></div></div>
+          <div class="ev-item"><div class="ev-date">05.01 FRI</div><div><div class="ev-title">UAE 공식 OPEC+ 탈퇴</div><div class="ev-desc">유가 추가 변동성 가능. 카르텔 균열 신호.</div></div></div>
+          <div class="ev-item"><div class="ev-date">05.02 FRI</div><div><div class="ev-title">미국 4월 고용보고서</div><div class="ev-desc">노동시장 둔화 신호 시 Fed 인하 기대 재점화.</div></div></div>
           <div class="ev-item"><div class="ev-date">05.20 WED</div><div><div class="ev-title">엔비디아 Q1 실적</div><div class="ev-desc">AI 사이클 지속 여부 최종 확인.</div></div></div>
+          <div class="ev-item ev-critical"><div class="ev-date">06.16</div><div><div class="ev-title">BOJ 금리 결정</div><div class="ev-desc"><strong style="color:var(--text-primary)">일본 ETF 보유 중 최대 변수.</strong> 인상 가능성 74%.</div></div></div>
         </div>
       </div>
 
       <div>
         <div class="t-lbl" style="margin-bottom:14px;">지금 경계할 리스크</div>
         <div class="risk-list">
-          <div class="r-item"><div class="r-title">BOJ 매파 깜짝 서프라이즈</div><div class="r-desc">일본 ETF 진입 직후라 주목. BOJ가 금리 인상 시사하면 엔화 강세 → 니케이 단기 타격 가능. 반대로 비둘기면 약세 기조 유지로 주가 긍정.</div></div>
-          <div class="r-item"><div class="r-title">연속 신고점 후유증</div><div class="r-desc">S&P·나스닥 동시 사상 최고가 경신 직후. FOMC 전 차익실현 욕구 + 기술적 과열 겹치면 -3~5% 조정 가능.</div></div>
-          <div class="r-item"><div class="r-title">이란 휴전 불안정성</div><div class="r-desc">휴전은 연장됐으나 이란이 2차 협상 거부. 호르무즈 해협 봉쇄 유지 중 → 유가 $92 여전히 높음. 상황 재악화 리스크 상존.</div></div>
-          <div class="r-item"><div class="r-title">FOMC 매파 서프라이즈</div><div class="r-desc">인플레 우려로 Fed가 연내 인하 가능성 축소 시사할 경우, 금리 인하 기대 자금 이탈 가능. 기술주가 가장 취약.</div></div>
+          <div class="r-item"><div class="r-title">유가 추가 급등 ($120 시나리오)</div><div class="r-desc">트럼프 협상 거부, 호르무즈 봉쇄 유지, UAE OPEC 탈퇴 등 악재 누적. WTI $115+ 시 전 자산 변동성 ↑, 인플레 재점화로 Fed 인상 카드까지 등장 가능.</div></div>
+          <div class="r-item"><div class="r-title">AI 사이클 의구심 확산</div><div class="r-desc">OpenAI 매출 미스 + 18일 연속 상승 후 첫 균열. 빅테크 자본지출 가이던스가 약화될 시 나스닥 -5~10% 조정 가능. 4/30~5/1 실적 결과가 분기점.</div></div>
+          <div class="r-item"><div class="r-title">엔/달러 160 돌파 후 변동성</div><div class="r-desc">일본 정부 외환시장 개입 가능성 ↑. 일본 ETF 보유자 직접 영향. 환헷지(H) 상품 전환 검토 가치.</div></div>
+          <div class="r-item"><div class="r-title">파월 사임 + Warsh 부임 불확실성</div><div class="r-desc">파월이 이사로 잔류 결정. Warsh가 의장 되더라도 균형 변하지 않을 가능성. 정치적 변수가 시장에 노이즈.</div></div>
         </div>
       </div>
     </div>
@@ -831,8 +458,8 @@ footer .sig { font-family: 'Fraunces', serif; font-style: italic; font-size: 12p
       <div class="ch-row"><div class="ch-asset">ACE 미국나스닥100</div><div class="ch-qty">15주</div><div class="ch-code">367380</div></div>
       <div class="ch-row"><div class="ch-asset">TIGER 미국배당다우존스</div><div class="ch-qty">17주</div><div class="ch-code">458730</div></div>
       <div class="ch-row"><div class="ch-asset">PLUS 고배당주</div><div class="ch-qty">19주</div><div class="ch-code">161510</div></div>
-      <div class="ch-row"><div class="ch-asset"><span class="ch-new">NEW</span>TIGER 일본니케이225</div><div class="ch-qty">1주</div><div class="ch-code">241180</div></div>
-      <div class="ch-row"><div class="ch-asset"><span class="ch-new">NEW</span>KODEX 일본TOPIX100</div><div class="ch-qty">1주</div><div class="ch-code">101280</div></div>
+      <div class="ch-row"><div class="ch-asset">TIGER 일본니케이225</div><div class="ch-qty">1주</div><div class="ch-code">241180</div></div>
+      <div class="ch-row"><div class="ch-asset">KODEX 일본TOPIX100</div><div class="ch-qty">1주</div><div class="ch-code">101280</div></div>
       <div class="ch-row"><div class="ch-asset">ABERDEEN STANDARD PHY (은)</div><div class="ch-qty">10주</div><div class="ch-code">SIVR</div></div>
       <div class="ch-row"><div class="ch-asset">ACE KRX금현물</div><div class="ch-qty">9주</div><div class="ch-code">411060</div></div>
       <div class="ch-row"><div class="ch-asset">TIGER KRX금현물</div><div class="ch-qty">12주</div><div class="ch-code">0072R0</div></div>
@@ -866,33 +493,18 @@ footer .sig { font-family: 'Fraunces', serif; font-style: italic; font-size: 12p
   <div class="disclaimer">
     본 대시보드는 개인 참고용이며 투자 권유나 자문이 아닙니다. 시그널·추천은 가능한 한 근거를 기반으로 하지만, 최종 투자 판단과 손익 책임은 본인에게 있습니다. 데이터는 발행 시점 기준이며 지연·오류가 있을 수 있습니다.
   </div>
-  <div class="sig">Stock Brief · 2026.04.23 기준 · 업데이트는 Claude에 요청 시</div>
+  <div class="sig">Stock Brief · 2026.04.30 기준 · 업데이트는 Claude에 요청 시</div>
 </footer>
 
 </div>
 
 <nav class="tab-bar">
   <div class="tab-bar-inner">
-    <button class="tab-btn active" data-tab="briefing">
-      <svg viewBox="0 0 24 24"><path d="M3 12l9-9 9 9"/><path d="M5 10v10a1 1 0 0 0 1 1h3v-6h6v6h3a1 1 0 0 0 1-1V10"/></svg>
-      브리핑
-    </button>
-    <button class="tab-btn" data-tab="position">
-      <svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>
-      포지션
-    </button>
-    <button class="tab-btn" data-tab="explore">
-      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
-      탐색
-    </button>
-    <button class="tab-btn" data-tab="events">
-      <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-      일정
-    </button>
-    <button class="tab-btn" data-tab="manage">
-      <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 1 1 3 3L7 19l-4 1 1-4z"/></svg>
-      관리
-    </button>
+    <button class="tab-btn active" data-tab="briefing"><svg viewBox="0 0 24 24"><path d="M3 12l9-9 9 9"/><path d="M5 10v10a1 1 0 0 0 1 1h3v-6h6v6h3a1 1 0 0 0 1-1V10"/></svg>브리핑</button>
+    <button class="tab-btn" data-tab="position"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>포지션</button>
+    <button class="tab-btn" data-tab="explore"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>탐색</button>
+    <button class="tab-btn" data-tab="events"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>일정</button>
+    <button class="tab-btn" data-tab="manage"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 1 1 3 3L7 19l-4 1 1-4z"/></svg>관리</button>
   </div>
 </nav>
 
@@ -986,11 +598,7 @@ footer .sig { font-family: 'Fraunces', serif; font-style: italic; font-size: 12p
     const list = document.getElementById('memo-list');
     const emptyMsg = document.getElementById('memo-empty');
     list.innerHTML = '';
-
-    if (memos.length === 0) {
-      emptyMsg.style.display = 'block';
-      return;
-    }
+    if (memos.length === 0) { emptyMsg.style.display = 'block'; return; }
     emptyMsg.style.display = 'none';
 
     memos.forEach((memo, i) => {
@@ -1026,9 +634,7 @@ footer .sig { font-family: 'Fraunces', serif; font-style: italic; font-size: 12p
     if (!text) return;
     const memos = loadMemos();
     const now = new Date();
-    const dateStr = now.getFullYear() + '.' +
-      String(now.getMonth() + 1).padStart(2, '0') + '.' +
-      String(now.getDate()).padStart(2, '0');
+    const dateStr = now.getFullYear() + '.' + String(now.getMonth() + 1).padStart(2, '0') + '.' + String(now.getDate()).padStart(2, '0');
     memos.push({ text: text, date: dateStr });
     saveMemos(memos);
     memoInput.value = '';
@@ -1051,7 +657,6 @@ footer .sig { font-family: 'Fraunces', serif; font-style: italic; font-size: 12p
 
   document.getElementById('update-btn').addEventListener('click', async () => {
     const memos = loadMemos();
-
     const holdings = [
       'TIGER 미국S&P500 · 60주 · 360750',
       'KODEX 미국S&P500 · 16주 · 379800',
